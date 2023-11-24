@@ -1,0 +1,422 @@
+@font-face {
+    font-family: AgencyFB;
+    src: url(AGENCYB.TTF);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+body {
+  color: white;
+  overflow-x: hidden;
+  margin: 0px;
+  font-family: AgencyFB;
+  font-size: 14pt;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+.links a.activelink {
+  color: #00DAFF;
+}
+
+.homecontainer {  
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+    grid-template-rows: 202px 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "titel titel titel titel links"
+      "info info info info info"
+      "info info info info info"
+      "info info info info info";
+  }
+  
+  .info { 
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top:-20px;
+    text-align: center;
+    grid-area: info; }
+  
+  .info p{
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+  
+  .page-info { grid-area: page-info; }
+  
+  .titel { 
+    display: flex;
+    grid-area: titel; }
+
+    .titel img{
+        height: 200px;
+        width: 200px;
+    }
+  
+  .links { 
+    padding: 5px;
+    grid-area: links; }
+
+    .links ul li{
+        margin-bottom: 10px;
+        list-style: none;
+    }
+
+    .links a { 
+        text-decoration: none;
+        color: white;
+    }
+
+    .links a:hover {
+        text-decoration: underline;
+        color: #00DAFF;
+    }
+
+    li.activelink {
+      color: #00DAFF;
+    }
+
+  .valleycontainer {  display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+    grid-template-rows: 202px 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "titel titel titel titel links"
+      "info info info info info"
+      "info info info info info"
+      "info info info info info";
+  }
+  
+  .titel { grid-area: titel; }
+  
+  .links { grid-area: links; }
+  
+  .info { grid-area: info; }
+
+  
+  .slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0px;
+  }
+
+  .slide {
+    display: none;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.781);
+    padding: 2%;
+    margin: 1%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: black;
+  }
+  
+  .slide img {
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .slide.active {
+    display: block;
+  }
+  
+
+  #nextButton {
+    background-color: whitesmoke;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #nextButton:hover {
+    color: #00BBFF;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 21%;
+    width: 2px;
+    height: 300px;
+    background: #007BFF;
+    transform: translateX(-50%);
+  }
+  .timeline-event {
+    position: relative;
+    margin: 0px 0;
+    padding-left: 30px;
+  }
+  .timeline-event::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 20%;
+    width: 20px;
+    height: 20px;
+    background: #007BFF;
+    border-radius: 50%;
+  }
+  .timeline-event h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #000000;
+  }
+  .timeline-event p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #202020;
+  }
+  
+
+
+  .languages {  display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+    grid-template-rows: 202px 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "titel titel titel titel links"
+      "info3 info3 info3 info3 info3"
+      "info3 info3 info3 info3 info3"
+      "info3 info3 info3 info3 info3";
+  }
+
+  .titel { grid-area: titel; }
+  
+  .links { grid-area: links; }
+  
+  .info3 { 
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 50px;
+    text-align: center;
+    grid-area: info3; } 
+
+    .info3 div{
+      padding-bottom: 30px;
+    }
+
+ .text area {
+  font-size: 14px;
+ }
+
+
+div.tekst-area
+{
+    display: block;
+}
+
+div.tekst-area>div
+{
+    display: flex;
+    align-items: left;
+    justify-content: space-around;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+div.tekst-area>div>div>a
+{
+    margin: 0;
+    padding: 0;
+}
+
+div.tekst-area
+{
+    display: block;
+}
+
+div.tekst-area>div
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+div.tekst-area>div>div>a
+{
+    margin: 0;
+    padding: 0;
+}   
+
+div.tekst-area>div>div:nth-of-type(3)
+{
+    width: 200px;
+}
+
+div.tekst-area>div>div:nth-of-type(4)
+{
+    padding: 19px;
+    border: 5px solid black;
+    border-radius: 16px;
+    width: 300px;
+}
+
+div.tekst-area>div>div:first-of-type
+{
+    width: 127px;
+}
+
+ .hofcontainer {  display: grid;
+  grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+  grid-template-rows: 202px 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "titel titel titel titel links"
+    "info info info info info"
+    "info info info info info"
+    "info info info info info";
+}
+
+.titel { grid-area: titel; }
+
+.links { grid-area: links; }
+
+.info { grid-area: info; }
+
+
+@media only screen and (max-width: 768px) {
+  [class*="languages"] {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hofcontainer {  display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+    grid-template-rows: 202px 202px 1fr 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "titel titel titel titel titel"
+      "links links links links links"
+      "info info info info info"
+      "info info info info info";
+  }
+  .homecontainer {  
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+    grid-template-rows: 202px 202px 1fr 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "titel titel titel titel titel"
+      "links links links links links"
+      "info info info info info"
+      "info info info info info";
+  }
+  .languages {  
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+    grid-template-rows: 202px 202px 1fr 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "titel titel titel titel titel"
+      "links links links links links"
+      "info3 info3 info3 info3 info3"
+      "info3 info3 info3 info3 info3";
+    padding: 5px;
+  }
+  .valleycontainer {  
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+    grid-template-rows: 202px 202px 1fr 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "titel titel titel titel titel"
+      "links links links links links"
+      "info info info info info"
+      "info info info info info";
+  }
+
+  .info3 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .info {
+    text-align: left;
+    flex-direction: column;
+    padding: 0px;
+  }
+  .links { 
+    padding: 5px;
+    grid-area: links; 
+  }
+    .links ul li{
+        margin-bottom: 10px;
+        list-style: none;
+    }
+
+    .links a { 
+        text-decoration: none;
+    }
+
+    .links a:hover {
+        text-decoration: underline;
+        color: #00DAFF;
+    }
+  .titel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .titel p{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .info p{
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  h1 {
+    font-size: 80px;
+  }
+  .titel img{
+    display: none;
+  }
+}
+
+
+
