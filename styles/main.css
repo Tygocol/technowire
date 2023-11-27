@@ -13,7 +13,7 @@ body {
   margin: 0px;
   font-family: AgencyFB;
   font-size: 14pt;
-  background-repeat: no-repeat;
+  background-color: #1b426c;
   background-size: cover;
   background-position: center;
 }
@@ -218,7 +218,13 @@ h1 {
     padding-right: 200px;
     padding-top: 50px;
     text-align: center;
-    grid-area: info3; } 
+    grid-area: info3; 
+    
+  
+  } 
+  .tijdlijn{
+    border-left: 5px white solid;
+  }
 
     .info3 div{
       padding-bottom: 30px;
