@@ -222,8 +222,39 @@ h1 {
     
   
   } 
+
+  .circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 50%;
+    left: calc(10% - 10px);
+}
+  .line {
+    width: 5px;
+    height: 1060%;
+    top: 250px;
+    background-color: #000000;
+    position: absolute;
+    left: 10%;
+    transform: translateX(-50%);
+}
+
+.line2 {
+  width: 5px;
+  height: 870%;
+  top: 250px;
+  background-color: #000000;
+  position: absolute;
+  left: 10%;
+  transform: translateX(-50%);
+}
   .tijdlijn{
     border-left: 5px white solid;
+    background-color: black;
+    margin: 10%;
+    padding: 10px;
   }
 
     .info3 div{
@@ -421,6 +452,16 @@ div.tekst-area>div>div:first-of-type
   }
   .titel img{
     display: none;
+  }
+
+  .line {
+    top: 50%;
+    height: 980%;
+  }
+
+  .line2 {
+    top: 50%;
+    height: 660%;
   }
 }
 
